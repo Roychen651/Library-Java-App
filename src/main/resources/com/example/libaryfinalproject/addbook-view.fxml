@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #5F9EA0;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.libaryfinalproject.addbookContoller">
+    <children>
+        <Button mnemonicParsing="false" onAction="#onbackButtonClick" style="-fx-background-color: #8FBC8F;" text="חזור">
+            <VBox.margin>
+                <Insets right="500.0" top="50.0" />
+            </VBox.margin>
+        </Button>
+        <Label text="בבקשה הכנס את שם הספר והמחבר">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="20.0" />
+            </VBox.margin>
+        </Label>
+        <!-- Previous components remain unchanged -->
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <TextField fx:id="idTextField" />
+                <Label text="מזהה הספר">
+                    <HBox.margin>
+                        <Insets left="5.0" />
+                    </HBox.margin>
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+                </Label>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <TextField fx:id="bookNameTextField">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </TextField>
+                <Label text="שם הספר" textAlignment="RIGHT">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font></Label>
+            </children>
+            <VBox.margin>
+                <Insets right="5.0" top="20.0" />
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <TextField fx:id="authorTextField" />
+                <Label text="שם המחבר">
+                    <HBox.margin>
+                        <Insets left="5.0" />
+                    </HBox.margin>
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+                </Label>
+            </children>
+            <VBox.margin>
+                <Insets top="20.0" />
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <TextField fx:id="yearTextField" />
+                <Label text="שנת ההוצאה">
+                    <HBox.margin>
+                        <Insets left="5.0" />
+                    </HBox.margin>
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+                </Label>
+            </children>
+            <VBox.margin>
+                <Insets top="20.0" />
+            </VBox.margin>
+        </HBox>
+        <!-- Assume there's an ID TextField somewhere here as well, with fx:id="idTextField" -->
+        <Button fx:id="addButton" mnemonicParsing="false" onAction="#addBook" style="-fx-background-color: #8FBC8F;" text="הוסף ספר">
+            <VBox.margin>
+                <Insets bottom="20.0" right="60.0" top="20.0" />
+            </VBox.margin>
+        </Button>
+
+        <TableView fx:id="tableViewBooks" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #5F9EA0;">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="50.0" text="מזהה" />
+                <TableColumn fx:id="titleColumn" prefWidth="150.0" text="שם הספר" />
+                <TableColumn fx:id="authorColumn" prefWidth="100.0" text="שם המחבר" />
+                <TableColumn fx:id="yearColumn" prefWidth="50.0" text="שנה" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </children>
+</VBox>

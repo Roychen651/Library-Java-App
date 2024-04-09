@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5F9EA0;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.libaryfinalproject.ManagerController">
+   <children>
+      <Label text="שלום מנהל , בחר מה תרצה לעשות ?">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font></Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onremoveBookButtonClick" style="-fx-background-color: #8FBC8F;" text="מחק ספר">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#onreditBookButtonClick" style="-fx-background-color: #8FBC8F;" text="ערוך ספר">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#onAddBookButtonClick" style="-fx-background-color: #8FBC8F;" text="הוסף ספר">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#onSearchBookButtonClick" style="-fx-background-color: #8FBC8F;" text="חפש ספר">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+      <ImageView fitHeight="181.0" fitWidth="272.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/1.png" />
+         </image></ImageView>
+   </children>
+</VBox>
